@@ -14,7 +14,7 @@ It’s hosted using GitHub Pages for simple, fast, and free deployment.
 
 ## Deployment
 The site is hosted via **GitHub Pages**.  
-To view it, simply open the repository’s GitHub Pages link in your browser.
+To view it, simply open the repository’s GitHub Pages link in your browser: https://rohitbr234.github.io/
 
 ---
 > This is a minimalist personal site — no specific personal details are included in this README.
