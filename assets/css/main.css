@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1497,6 +1500,38 @@ input, select, textarea {
 				}
 
 		}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* space between image and text */
+  flex-wrap: wrap; /* stacks on smaller screens */
+}
+
+.intro-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px; /* optional rounded corners */
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+}
 
 /* Main */
 
