@@ -92,12 +92,36 @@
       const currentScroll = window.scrollY;
 
       if (currentScroll > 100) {
-        header.style.padding = '0.5rem 0';
+        header.style.padding = '0.75rem 0';
       } else {
-        header.style.padding = '1rem 0';
+        header.style.padding = '1.25rem 0';
       }
 
       lastScroll = currentScroll;
+    });
+  }
+
+  // Back to top button visibility
+  function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Handle click
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   }
 
@@ -138,6 +162,7 @@
     initSmoothScroll();
     initScrollSpy();
     initStickyHeader();
+    initBackToTop();
     initScrollAnimations();
     handleInitialHash();
 
