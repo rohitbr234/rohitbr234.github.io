@@ -102,8 +102,7 @@ nav ul li {
 }
 
 nav ul li a {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   padding: 0.75rem 0;
   color: #64748b;
   text-decoration: none;
@@ -113,27 +112,30 @@ nav ul li a {
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   position: relative;
-}
-
-nav ul li a:before {
-  content: '';
-  width: 2rem;
-  height: 1px;
-  background: #334155;
-  display: inline-block;
-  margin-right: 1rem;
-  transition: all 0.3s ease;
+  padding-left: 0;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   color: #f1f5f9;
+  padding-left: 1rem;
+}
+
+nav ul li a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  transition: width 0.3s ease;
 }
 
 nav ul li a:hover:before,
 nav ul li a.active:before {
-  width: 4rem;
-  background: #60a5fa;
+  width: 0.5rem;
 }
 
 /* Social Links */
