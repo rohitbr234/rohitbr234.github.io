@@ -1,306 +1,280 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
-    <title>Rohit Bala Ramesh</title>
+    <title>Rohit Ramesh - Portfolio</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="images/logo.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Rohit Ramesh - High school student passionate about computer science, AI, and applied mathematics" />
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <!-- Custom modern CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
   </head>
 
   <body>
     <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <div class="content">
-          <div class="inner">
-            <div>
-              <img
-                src="images/rohit.jpg"
-                alt="Rohit Ramesh"
-              />
-            </div>
-            <div>
-              <h1><a href="#top" style="text-decoration: none; color: inherit;">Rohit Ramesh</a></h1>
-              <p>
-                High school senior passionate about computer science and applied
-                math.
-              </p>
-              <div>
-                <a href="https://github.com/rohitbr234" target="_blank" rel="noopener">
-                  <span class="icon brands fa-github"></span>
-                  GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/rohitramesh14" target="_blank" rel="noopener">
-                  <span class="icon brands fa-linkedin"></span>
-                  LinkedIn
-                </a>
-                <a href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view?usp=sharing" target="_blank" rel="noopener">
-                  <span class="icon fa-address-card"></span>
-                  Resume
-                </a>
-              </div>
-              <div>
-                <a href="mailto:rohit.ramesh0174@gmail.com">
-                  <span class="icon fa-envelope"></span>
-                  rohit.ramesh0174@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
+      <!-- Sidebar (Fixed Left) -->
+      <aside id="sidebar">
+        <div class="profile">
+          <img src="images/rohit.jpg" alt="Rohit Ramesh" class="profile-image" />
+          <h1>Rohit Ramesh</h1>
+          <h2>Student & Developer</h2>
+          <p class="profile-description">
+            High school senior passionate about computer science, AI, and applied mathematics.
+          </p>
         </div>
+
         <nav>
           <ul>
-            <li><a href="#intro">Intro</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-      </header>
 
-      <!-- Main -->
-      <div id="main">
-        <!-- Intro -->
-        <article id="intro">
-          <h2 class="major">Intro</h2>
+        <div class="social-links">
+          <a href="https://github.com/rohitbr234" target="_blank" rel="noopener" aria-label="GitHub">
+            <span class="icon brands fa-github"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/rohitramesh14" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <span class="icon brands fa-linkedin"></span>
+          </a>
+          <a href="mailto:rohit.ramesh0174@gmail.com" aria-label="Email">
+            <span class="icon fa-envelope"></span>
+          </a>
+        </div>
+      </aside>
 
-          <div class="intro-container">
-            <div class="intro-image">
-              <img src="images/rohit1.jpg" alt="RR" />
+      <!-- Main Content (Scrolling Right) -->
+      <main id="main-content">
+        <!-- About Section -->
+        <section id="about">
+          <h2>About</h2>
+          <div class="about-content">
+            <img src="images/about.jpg" alt="About" class="about-image" />
+            <p>
+              I'm a rising senior passionate about <strong>Computer Science</strong>,
+              <strong>Mathematics</strong>, <strong>Environmental Science</strong>, and
+              <strong>Cognitive Science</strong>.
+            </p>
+            <p>
+              I enjoy projects that combine <strong>analytical thinking</strong> with a curiosity for how
+              the world works—from coding AI models to analyze satellite data to designing experiments
+              to study mindfulness.
+            </p>
+            <p>
+              My current focus is <strong>agentic AI systems</strong> that blend computer vision,
+              automation, and mindfulness. I see technology as a bridge between understanding the world
+              and understanding ourselves.
+            </p>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Urban Heat Island Analysis</h3>
+              </div>
             </div>
-            <div class="intro-text">
-              <p>
-                Hi, I’m Rohit – a high school student who loves exploring how
-                data, AI, and human behavior intersect. I’m always looking for
-                ways to apply what I learn to real-world problems.
-              </p>
+            <p class="card-description">
+              Used satellite imagery and machine learning to model urban heat island intensity across
+              cities worldwide, helping understand how urban design affects local temperatures.
+            </p>
+            <div class="card-links">
+              <a href="https://www.techrxiv.org/users/938266/articles/1309355-modeling-urban-heat-island-intensity-using-satellite-imagery-and-machine-learning" target="_blank" rel="noopener">
+                <span class="icon fa-file-alt"></span> Paper
+              </a>
+              <a href="https://github.com/rohitbr234/uhi_analysis" target="_blank" rel="noopener">
+                <span class="icon brands fa-github"></span> GitHub
+              </a>
+            </div>
+            <div class="tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">Satellite Data</span>
             </div>
           </div>
-        </article>
 
-        <!-- Projects -->
-        <article id="projects">
-          <h2 class="major">Projects</h2>
-          <div class="intro-container">
-            <div class="intro-image">
-              <img src="images/projects.jpg" alt="RR" />
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">EEG Analysis with Machine Learning</h3>
+              </div>
             </div>
-            <div class="intro-text">
-              <p>
-                <b>Urban Heat Island Analysis:</b> I used satellite imagery and
-                machine learning to model urban heat island intensity across
-                cities worldwide, helping understand how urban design affects
-                local temperatures.<br />
-                <a
-                  href="https://www.techrxiv.org/users/938266/articles/1309355-modeling-urban-heat-island-intensity-using-satellite-imagery-and-machine-learning"
-                  target="_blank"
-                  >Published link at TechRxiv</a
-                ><br />
-                <a
-                  href="https://github.com/rohitbr234/uhi_analysis"
-                  target="_blank"
-                  >GitHub: UHI-Analysis</a
-                >
-              </p>
-
-              <p>
-                <b>EEG Analysis with Machine Learning:</b> I analyzed
-                open-access EEG datasets using unsupervised machine learning,
-                incorporating electrode mapping and clustering techniques to
-                explore patterns in meditation expertise. Presented findings at
-                an undergraduate research conference.<br />
-                <a
-                  href="https://raw.githubusercontent.com/rohitbr234/rohitbr234.github.io/main/doc/EEG_Medidation_Poster.pdf"
-                  target="_blank"
-                  >PDF: EEG Research Paper</a
-                >
-              </p>
-
-              <p>
-                <b>Short-form Video Clipper:</b> I developed a script to convert
-                long-form videos into short-form clips, automatically generating
-                captions, formatting subtitles, and preparing content for
-                platforms like YouTube Shorts, TikTok, and Instagram Reels.
-                <br /><a
-                  href="https://github.com/DeveshParagiri/yt-shorts"
-                  target="_blank"
-                  >GitHub: yt-shorts</a
-                >
-              </p>
-
-              <p>
-                <b>Study Scheduler:</b> Developed an agentic AI system that
-                automatically planned and executed tasks by integrating large
-                language models with external tools to schedule events in Google
-                Calendar.<br /><a
-                  href="https://github.com/rohitbr234/StudyScheduler"
-                  target="_blank"
-                  >Github: https://github.com/rohitbr234/StudyScheduler</a
-                >
-              </p>
-
-              <p>
-                <b>Flashcard Generator:</b> Created a program that generates
-                flashcards for the software Anki to support language learning,
-                using LLM prompts and automation for fast study material
-                creation.<br /><a
-                  href="https://github.com/rohitbr234/FlashcardGenerator"
-                  target="_blank"
-                  >Github: https://github.com/rohitbr234/FlashcardGenerator</a
-                >
-              </p>
+            <p class="card-description">
+              Analyzed open-access EEG datasets using unsupervised machine learning, incorporating electrode
+              mapping and clustering techniques to explore patterns in meditation expertise. Presented findings
+              at an undergraduate research conference.
+            </p>
+            <div class="card-links">
+              <a href="https://raw.githubusercontent.com/rohitbr234/rohitbr234.github.io/main/doc/EEG_Medidation_Poster.pdf" target="_blank" rel="noopener">
+                <span class="icon fa-file-pdf"></span> Poster
+              </a>
+            </div>
+            <div class="tags">
+              <span class="tag">EEG</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Neuroscience</span>
             </div>
           </div>
-        </article>
 
-        <!-- About -->
-        <article id="about">
-          <h2 class="major">About</h2>
-          <div class="intro-container">
-            <div class="intro-image">
-              <img src="images/about.jpg" alt="RR" />
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Study Scheduler</h3>
+              </div>
             </div>
-            <div class="intro-text">
-              <h2>💡 About Me</h2>
-              <p>
-                I'm a rising senior passionate about
-                <strong>Computer Science</strong>,
-                <strong>Mathematics</strong>,
-                <strong>Environmental Science</strong>, and
-                <strong>Cognitive Science</strong>.
-              </p>
-              <p>
-                I enjoy projects that combine
-                <strong>analytical thinking</strong> with a curiosity for how
-                the world works—from <strong>coding AI models</strong> to
-                analyze satellite data to <strong>designing experiments</strong>
-                to study mindfulness.
-              </p>
-              <p>
-                My current focus is <strong>agentic AI systems</strong> that
-                blend computer vision, automation, and mindfulness. I see
-                technology as a bridge between understanding the world and
-                understanding ourselves.
-              </p>
-
-              <h2>🤝 Leadership &amp; Community</h2>
-              <ul>
-                <li>
-                  <strong>Founder and President</strong> of the Coding Club.
-                </li>
-                <li>
-                  <strong>Co-president</strong> of the Math Club and
-                  <strong>leader</strong> of the Coding Club.
-                </li>
-                <li>
-                  <strong>Tutor</strong> at Mathnasium, mentoring peers in
-                  problem-solving and logic.
-                </li>
-              </ul>
+            <p class="card-description">
+              Developed an agentic AI system that automatically planned and executed tasks by integrating
+              large language models with external tools to schedule events in Google Calendar.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/rohitbr234/StudyScheduler" target="_blank" rel="noopener">
+                <span class="icon brands fa-github"></span> GitHub
+              </a>
+            </div>
+            <div class="tags">
+              <span class="tag">AI Agents</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Python</span>
             </div>
           </div>
-        </article>
 
-        <!-- Contact -->
-        <article id="contact">
-          <h2 class="major">Contact</h2>
-          <div class="intro-container">
-            <div class="intro-image">
-              <img src="images/contact.jpg" alt="RR" />
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Short-form Video Clipper</h3>
+              </div>
             </div>
-            <div class="intro-text">
-              <p>
-                If you’d like to connect, collaborate, or learn more about my
-                research and projects, feel free to reach out through any of the
-                links below.
-              </p>
-
-              <ul class="contact-list">
-                <li>
-                  <strong>Email:</strong>
-                  <a href="mailto:rohit.ramesh0174@gmail.com"
-                    >rohit.ramesh0174@gmail.com</a
-                  >
-                </li>
-                <li>
-                  <strong>LinkedIn:</strong>
-                  <a
-                    href="https://www.linkedin.com/in/rohitramesh14/"
-                    target="_blank"
-                    >linkedin.com/in/rohitramesh14</a
-                  >
-                </li>
-                <li>
-                  <strong>GitHub:</strong>
-                  <a href="https://github.com/rohitbr234" target="_blank"
-                    >github.com/rohitbr234</a
-                  >
-                </li>
-                <li>
-                  <strong>Resume:</strong>
-                  <a
-                    href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view"
-                    target="_blank"
-                    >Resume</a
-                  >
-                </li>
-              </ul>
-
-              <ul class="icons">
-                <li>
-                  <a
-                    href="https://github.com/rohitbr234"
-                    class="icon brands fa-github"
-                    ><span class="label">GitHub</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/rohitramesh14/"
-                    class="icon brands fa-linkedin"
-                    ><span class="label">LinkedIn</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="mailto:rohit.ramesh0174@gmail.com"
-                    class="icon solid fa-envelope"
-                    ><span class="label">Email</span></a
-                  >
-                </li>
-              </ul>
+            <p class="card-description">
+              Developed a script to convert long-form videos into short-form clips, automatically generating
+              captions, formatting subtitles, and preparing content for platforms like YouTube Shorts, TikTok,
+              and Instagram Reels.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/DeveshParagiri/yt-shorts" target="_blank" rel="noopener">
+                <span class="icon brands fa-github"></span> GitHub
+              </a>
+            </div>
+            <div class="tags">
+              <span class="tag">Video Processing</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Python</span>
             </div>
           </div>
-        </article>
-      </div>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <!-- Footer credit removed -->
-      </footer>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Flashcard Generator</h3>
+              </div>
+            </div>
+            <p class="card-description">
+              Created a program that generates flashcards for the software Anki to support language learning,
+              using LLM prompts and automation for fast study material creation.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/rohitbr234/FlashcardGenerator" target="_blank" rel="noopener">
+                <span class="icon brands fa-github"></span> GitHub
+              </a>
+            </div>
+            <div class="tags">
+              <span class="tag">LLMs</span>
+              <span class="tag">Education</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+          <h2>Leadership & Experience</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Coding Club</h3>
+                <p class="card-subtitle">Founder & President</p>
+              </div>
+            </div>
+            <p class="card-description">
+              Founded and lead the school's coding club, organizing workshops and collaborative projects
+              for students interested in software development.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Math Club</h3>
+                <p class="card-subtitle">Co-President</p>
+              </div>
+            </div>
+            <p class="card-description">
+              Co-lead the Math Club, organizing problem-solving sessions and preparing members for
+              mathematics competitions.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Mathnasium</h3>
+                <p class="card-subtitle">Tutor</p>
+              </div>
+            </div>
+            <p class="card-description">
+              Tutor students in mathematics, helping them develop problem-solving skills and mathematical reasoning.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <h2>Get In Touch</h2>
+          <p>
+            If you'd like to connect, collaborate, or learn more about my research and projects,
+            feel free to reach out through any of the links below.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:rohit.ramesh0174@gmail.com">rohit.ramesh0174@gmail.com</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/rohitramesh14/" target="_blank" rel="noopener">linkedin.com/in/rohitramesh14</a>
+            </li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/rohitbr234" target="_blank" rel="noopener">github.com/rohitbr234</a>
+            </li>
+            <li>
+              <strong>Resume:</strong>
+              <a href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view" target="_blank" rel="noopener">View Resume</a>
+            </li>
+          </ul>
+        </section>
+
+        <footer>
+          <p>Built with HTML, CSS, and JavaScript. © 2025 Rohit Ramesh.</p>
+        </footer>
+      </main>
     </div>
 
-    <!-- BG -->
-    <div id="bg"></div>
-
     <!-- Back to Top Button -->
-    <a href="#top" id="back-to-top" title="Back to top">
+    <a href="#" id="back-to-top" title="Back to top" aria-label="Back to top">
       <span class="icon fa-chevron-up"></span>
     </a>
 
-    <!-- Custom JavaScript for smooth scrolling and navigation -->
+    <!-- Custom JavaScript -->
     <script src="assets/js/custom.js"></script>
   </body>
 </html>
