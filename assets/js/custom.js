@@ -1,5 +1,5 @@
 /**
- * Modern Single-Page Portfolio - Navigation & Interactions
+ * Professional Sidebar Portfolio - Navigation & Interactions
  */
 
 (function() {
@@ -8,43 +8,51 @@
   // Smooth scroll to sections
   function initSmoothScroll() {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const backToTop = document.getElementById('back-to-top');
 
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
-          // Remove active class from all links
-          navLinks.forEach(l => l.classList.remove('active'));
-
-          // Add active class to clicked link
-          this.classList.add('active');
-
-          // Scroll to section
           targetSection.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
 
-          // Update URL without triggering scroll
+          // Update URL
           if (history.pushState) {
             history.pushState(null, null, '#' + targetId);
           }
         }
       });
     });
+
+    // Back to top button
+    if (backToTop) {
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        // Reset URL
+        if (history.pushState) {
+          history.pushState(null, null, window.location.pathname);
+        }
+      });
+    }
   }
 
-  // Highlight active section in navigation on scroll
+  // Highlight active section in navigation
   function initScrollSpy() {
-    const sections = document.querySelectorAll('#main article[id]');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
     function highlightNavOnScroll() {
-      let scrollPos = window.scrollY + 200; // offset for header
+      const scrollPos = window.scrollY + 200;
 
       sections.forEach(section => {
         const top = section.offsetTop;
@@ -66,6 +74,21 @@
     highlightNavOnScroll(); // Initial check
   }
 
+  // Back to top button visibility
+  function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+  }
+
   // Handle hash on page load
   function handleInitialHash() {
     if (window.location.hash) {
@@ -83,55 +106,13 @@
     }
   }
 
-  // Sticky header effect
-  function initStickyHeader() {
-    const header = document.getElementById('header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-
-      if (currentScroll > 100) {
-        header.style.padding = '0.75rem 0';
-      } else {
-        header.style.padding = '1.25rem 0';
-      }
-
-      lastScroll = currentScroll;
-    });
-  }
-
-  // Back to top button visibility
-  function initBackToTop() {
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    if (!backToTopBtn) return;
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    });
-
-    // Handle click
-    backToTopBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
-
-  // Add fade-in animation to articles on scroll
+  // Add fade-in animation to cards
   function initScrollAnimations() {
-    const articles = document.querySelectorAll('#main article');
+    const cards = document.querySelectorAll('.card');
 
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
+      rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -143,11 +124,11 @@
       });
     }, observerOptions);
 
-    articles.forEach(article => {
-      article.style.opacity = '0';
-      article.style.transform = 'translateY(20px)';
-      article.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(article);
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
     });
   }
 
@@ -161,7 +142,6 @@
   function init() {
     initSmoothScroll();
     initScrollSpy();
-    initStickyHeader();
     initBackToTop();
     initScrollAnimations();
     handleInitialHash();
