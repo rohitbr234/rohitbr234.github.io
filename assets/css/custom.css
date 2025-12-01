@@ -342,15 +342,19 @@ ul.icons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background: rgba(39, 39, 42, 0.6);
   border: 1px solid rgba(63, 63, 70, 0.5);
   border-radius: 50%;
   color: #d4d4d8;
-  font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ul.icons a i {
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 ul.icons a:hover {
@@ -359,10 +363,6 @@ ul.icons a:hover {
   color: #93c5fd;
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
-}
-
-ul.icons a .label {
-  display: none;
 }
 
 /* Footer */
