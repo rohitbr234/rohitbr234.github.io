@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="images/logo.png" type="image/png" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- ONLY override: keep header/nav visible and clickable when article overlay is open -->
+    <style>
+      body.is-article-visible #header {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
+      }
+    </style>
   </head>
 
   <body class="is-preload">
@@ -344,7 +353,7 @@
           </div>
         </article>
 
-        <!-- Elements (unchanged Dimension demo content) -->
+        <!-- Elements (unchanged demo article) -->
         <article id="elements">
           <h2 class="major">Elements</h2>
 
@@ -352,10 +361,10 @@
             <h3 class="major">Text</h3>
             <p>
               This is <b>bold</b> and this is <strong>strong</strong>. This is
-              <i>italic</i> and this is <em>emphasized</em>. This is
-              <sup>superscript</sup> text and this is
-              <sub>subscript</sub> text. This is <u>underlined</u> and this is
-              code: <code>for (;;) { ... }</code>. Finally,
+              <i>italic</i> and this is <em>emphasized</em>. This is superscript
+              text and this is subscript text. This is
+              <u>underlined</u> and this is code:
+              <code>for (;;) { ... }</code>. Finally,
               <a href="#">this is a link</a>.
             </p>
             <hr />
@@ -666,7 +675,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <!-- BG -->
     <div id="bg"></div>
 
-    <!-- Scripts: original Dimension overlay behavior -->
+    <!-- Scripts (original Dimension JS) -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
