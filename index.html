@@ -1,434 +1,500 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<title>Rohit Bala Ramesh</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/logo.png" type="image/png">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-		#header nav {
-		    position: relative;
-		    z-index: 999999 !important;
-		    pointer-events: auto !important;
-		}
-		
-		#header nav a {
-		    pointer-events: auto !important;
-		}
-		
-		.intro-container {
-		    position: relative;
-		    z-index: 1;
-		}
-		</style>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Rohit Bala Ramesh</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Wrapper -->
-			<div id="wrapper" style="margin-top: -60px;">
+    <!-- Small, surgical overrides: keep Dimension look, remove overlay -->
+    <style>
+      /* Use Inter instead of Source Sans Pro */
+      body,
+      input,
+      select,
+      textarea {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-user"></span>
-						</div>
-						<div class="content">
-							<div class="inner" style="display: flex; align-items: center; justify-content: center;">
-								<div>
-									<img src="images/rohit.jpg" alt="Rohit Ramesh" style="width:160px; height:160px; border-radius:50%; margin-right: 2em;">
-								</div>
-								<div>
-									<h1>Rohit Ramesh</h1>
-									<p>High school senior passionate about computer science and applied math.</p>
-									<div style="margin-top: 1em;">
-										<a href="https://github.com/rohitbr234" style="margin: 0 1em; font-weight: 600; color: #0074d9;">
-											<span class="icon brands fa-github" style="font-size: 1em; vertical-align: middle; margin-right: 0.3em; position: relative; top: -1.5px;"></span>GitHub
-										</a>
-										<a href="https://www.linkedin.com/in/rohitramesh14" style="margin: 0 1em; font-weight: 600; color: #0074d9;">
-											<span class="icon brands fa-linkedin" style="font-size: 1em; vertical-align: middle; margin-right: 0.3em; position: relative; top: -1.5px;"></span>LinkedIn
-										</a>
-										<a href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view?usp=sharing" style="margin: 0 1em; font-weight: 600; color: #0074d9;">
-											<span class="icon fa-address-card" style="font-size: 1em; vertical-align: middle; margin-right: 0.3em; position: relative; top: -1.5px;"></span>Resume
-										</a>
-									</div>
-									<div style="margin-top: 0.5em;">
-										<a href="mailto:rohit.ramesh0174@gmail.com" style="margin: 0 1em; color: #ffffff; font-size: inherit;">
-											<span class="icon fa-envelope" style="font-size: 1em; vertical-align: middle; margin-right: 0.3em; position: relative; top: -1.5px;"></span>rohit.ramesh0174@gmail.com
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+      /* Let the page scroll normally, not fixed in the center */
+      #wrapper {
+        margin-top: 0;
+        padding: 3em 0 4em;
+      }
 
-				<!-- Main -->
-					<div id="main">
+      /* Header: normal centered card, not fixed overlay */
+      #header {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 40em;
+        max-width: calc(100% - 4em);
+        margin: 0 auto 3em auto;
+      }
 
-						<!-- Intro -->
-							<article id="intro">
-							  <h2 class="major">Intro</h2>
-							
-							  <div class="intro-container">
-							    <div class="intro-image">
-							      <img src="images/rohit1.jpg" alt="RR" />
-							    </div>
-							    <div class="intro-text">
-							      <p>Hi, I’m Rohit – a high school student who loves exploring how data, AI, and human behavior intersect. I’m always looking for ways to apply what I learn to real-world problems.</p>
-							    </div>
-							  </div>
-							</article>
+      /* Main: stacked sections instead of overlay */
+      #main {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 40em;
+        max-width: calc(100% - 4em);
+        max-height: none;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: auto;
+        margin: 0 auto 4em auto;
+      }
 
-						<!-- Work -->
-							<article id="projects">
-								 <div class="intro-container">
-							    <div class="intro-image">
-							      <img src="images/projects.jpg" alt="RR" />
-							    </div>
-							<div class="intro-text">
+      /* Inner wrapper: let content flow */
+      #main > .inner {
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+      }
 
-							<p><b>Urban Heat Island Analysis:</b> I used satellite imagery and machine learning to model urban heat island intensity across cities worldwide, helping understand how urban design affects local temperatures.<br><a href="https://www.techrxiv.org/users/938266/articles/1309355-modeling-urban-heat-island-intensity-using-satellite-imagery-and-machine-learning" target="_blank">Published link at TechRxiv</a><br><a href="https://github.com/rohitbr234/uhi_analysis" target="_blank">GitHub: UHI-Analysis</a></p>
+      /* Articles: always visible, no transitions needed */
+      #main > article {
+        position: static;
+        opacity: 1;
+        transform: none;
+        margin: 0 0 3em 0;
+      }
 
-  							<p><b>EEG Analysis with Machine Learning:</b> I analyzed open-access EEG datasets using unsupervised machine learning, incorporating electrode mapping and clustering techniques to explore patterns in meditation expertise. Presented findings at an undergraduate research conference.<br><a href="https://raw.githubusercontent.com/rohitbr234/rohitbr234.github.io/main/doc/EEG_Medidation_Poster.pdf" target="_blank">PDF: EEG Research Paper</a></p>
+      /* Remove the close "X" from articles if it ever appears */
+      #main > article .close {
+        display: none !important;
+      }
 
- 							<p><b>Short-form Video Clipper:</b> I developed a script to convert long-form videos into short-form clips, automatically generating captions, formatting subtitles, and preparing content for platforms like YouTube Shorts, TikTok, and Instagram Reels. <br><a href="https://github.com/DeveshParagiri/yt-shorts" target="_blank">GitHub: yt-shorts</a></p>
+      /* Ignore overlay-related body classes */
+      body.is-article-visible #header,
+      body.is-article-visible #main {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-  							<p><b>Study Scheduler:</b> Developed an agentic AI system that automatically planned and executed tasks by integrating large language models with external tools to schedule events in Google Calendar.<br><a href="https://github.com/rohitbr234/StudyScheduler" target="_blank">Github: https://github.com/rohitbr234/StudyScheduler</a></p>
+      body.is-article-visible #bg {
+        transform: none;
+        filter: none;
+      }
 
-  							<p><b>Flashcard Generator:</b> Created a program that generates flashcards for the software Anki to support language learning, using LLM prompts and automation for fast study material creation.<br><a href="https://github.com/rohitbr234/FlashcardGenerator" target="_blank">Github: https://github.com/rohitbr234/FlashcardGenerator</a></p>
-							</div>
-							</div>
-							</article>
+      /* Make sure nav is clickable */
+      #header nav {
+        position: relative;
+        z-index: 10;
+      }
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<div class="intro-container">
-							    <div class="intro-image">
-							      <img src="images/about.jpg" alt="RR" />
-							    </div>
-									<div class="intro-container">
+      /* Your two-column intro layout */
+      .intro-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
 
-								        <h2>💡 About Me</h2>
-								    	<p>
-										    I'm a rising senior passionate about <strong>Computer Science</strong>, <strong>Mathematics</strong>, <strong>Environmental Science</strong>, and <strong>Cognitive Science</strong>.
-										</p>
-										<p>
-										    I enjoy projects that combine <strong>analytical thinking</strong> with a curiosity for how the world works—from <strong>coding AI models</strong> to analyze satellite data to <strong>designing experiments</strong> to study mindfulness.
-										</p>
-										<p>
-										    My current focus is <strong>agentic AI systems</strong> that blend computer vision, automation, and mindfulness. I see technology as a bridge between understanding the world and understanding ourselves.
-										</p>
+      .intro-image img {
+        display: block;
+        max-width: 100%;
+        border-radius: 0.5em;
+      }
 
-															
-								        <h2>🤝 Leadership & Community</h2>
-								       <ul>
-										    <li><strong>Founder and President</strong> of the Coding Club.</li>
-										    <li><strong>Co-president</strong> of the Math Club and <strong>leader</strong> of the Coding Club.</li>
-										    <li><strong>Tutor</strong> at Mathnasium, mentoring peers in problem-solving and logic.</li>
-										</ul>
-								
-								    </div>
-								</div>
-							</article>
+      .intro-text {
+        flex: 1 1 230px;
+      }
 
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
 
-						<!-- Contact -->
-							<article id="contact">
-							 <div class="intro-container">
-							    <div class="intro-image">
-							      <img src="images/contact.jpg" alt="RR" />
-							    </div>
-							<div class="intro-text">
-							  <p>If you’d like to connect, collaborate, or learn more about my research and projects, feel free to reach out through any of the links below.</p>
-							
-							  <ul class="contact-list">
-							    <li><strong>Email:</strong> <a href="mailto:rohit.ramesh0174@gmail.com">rohit.ramesh0174@gmail.com</a></li>
-							    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohitramesh14/" target="_blank">linkedin.com/in/rohitramesh14</a></li>
-							    <li><strong>GitHub:</strong> <a href="https://github.com/rohitbr234" target="_blank">github.com/rohitbr234</a></li>
-							    <li><strong>Resume:</strong> <a href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view" target="_blank">Resume</a></li>
-							  </ul>
-							
-							  <ul class="icons">
-							    <li><a href="https://github.com/rohitbr234" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							    <li><a href="https://www.linkedin.com/in/rohitramesh14/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							    <li><a href="mailto:rohit.ramesh0174@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							  </ul>
-								</div>
-								</div>
-							</article>
+      @media screen and (max-width: 736px) {
+        .intro-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+  <body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="logo">
+          <span class="icon fa-user"></span>
+        </div>
+        <div class="content">
+          <div
+            class="inner"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <div>
+              <img
+                src="images/rohit.jpg"
+                alt="Rohit Ramesh"
+                style="
+                  width: 160px;
+                  height: 160px;
+                  border-radius: 50%;
+                  margin-right: 2em;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div>
+              <h1>Rohit Ramesh</h1>
+              <p>
+                High school senior passionate about computer science and applied
+                math.
+              </p>
+              <div style="margin-top: 1em;">
+                <a
+                  href="https://github.com/rohitbr234"
+                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
+                >
+                  <span
+                    class="icon brands fa-github"
+                    style="
+                      font-size: 1em;
+                      vertical-align: middle;
+                      margin-right: 0.3em;
+                      position: relative;
+                      top: -1.5px;
+                    "
+                  ></span
+                  >GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/rohitramesh14"
+                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
+                >
+                  <span
+                    class="icon brands fa-linkedin"
+                    style="
+                      font-size: 1em;
+                      vertical-align: middle;
+                      margin-right: 0.3em;
+                      position: relative;
+                      top: -1.5px;
+                    "
+                  ></span
+                  >LinkedIn
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view?usp=sharing"
+                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
+                >
+                  <span
+                    class="icon fa-address-card"
+                    style="
+                      font-size: 1em;
+                      vertical-align: middle;
+                      margin-right: 0.3em;
+                      position: relative;
+                      top: -1.5px;
+                    "
+                  ></span
+                  >Resume
+                </a>
+              </div>
+              <div style="margin-top: 0.5em;">
+                <a
+                  href="mailto:rohit.ramesh0174@gmail.com"
+                  style="margin: 0 1em; color: #ffffff; font-size: inherit;"
+                >
+                  <span
+                    class="icon fa-envelope"
+                    style="
+                      font-size: 1em;
+                      vertical-align: middle;
+                      margin-right: 0.3em;
+                      position: relative;
+                      top: -1.5px;
+                    "
+                  ></span
+                  >rohit.ramesh0174@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+      <!-- Main -->
+      <div id="main">
+        <!-- Intro -->
+        <article id="intro">
+          <h2 class="major">Intro</h2>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+          <div class="intro-container">
+            <div class="intro-image">
+              <img src="images/rohit1.jpg" alt="RR" />
+            </div>
+            <div class="intro-text">
+              <p>
+                Hi, I’m Rohit – a high school student who loves exploring how
+                data, AI, and human behavior intersect. I’m always looking for
+                ways to apply what I learn to real-world problems.
+              </p>
+            </div>
+          </div>
+        </article>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+        <!-- Projects -->
+        <article id="projects">
+          <h2 class="major">Projects</h2>
+          <div class="intro-container">
+            <div class="intro-image">
+              <img src="images/projects.jpg" alt="RR" />
+            </div>
+            <div class="intro-text">
+              <p>
+                <b>Urban Heat Island Analysis:</b> I used satellite imagery and
+                machine learning to model urban heat island intensity across
+                cities worldwide, helping understand how urban design affects
+                local temperatures.<br />
+                <a
+                  href="https://www.techrxiv.org/users/938266/articles/1309355-modeling-urban-heat-island-intensity-using-satellite-imagery-and-machine-learning"
+                  target="_blank"
+                  >Published link at TechRxiv</a
+                ><br />
+                <a
+                  href="https://github.com/rohitbr234/uhi_analysis"
+                  target="_blank"
+                  >GitHub: UHI-Analysis</a
+                >
+              </p>
 
-								<section>
-									<h3 class="major">Lists</h3>
+              <p>
+                <b>EEG Analysis with Machine Learning:</b> I analyzed
+                open-access EEG datasets using unsupervised machine learning,
+                incorporating electrode mapping and clustering techniques to
+                explore patterns in meditation expertise. Presented findings at
+                an undergraduate research conference.<br />
+                <a
+                  href="https://raw.githubusercontent.com/rohitbr234/rohitbr234.github.io/main/doc/EEG_Medidation_Poster.pdf"
+                  target="_blank"
+                  >PDF: EEG Research Poster</a
+                >
+              </p>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+              <p>
+                <b>Short-form Video Clipper:</b> I developed a script to convert
+                long-form videos into short-form clips, automatically generating
+                captions, formatting subtitles, and preparing content for
+                platforms like YouTube Shorts, TikTok, and Instagram Reels.
+                <br /><a
+                  href="https://github.com/DeveshParagiri/yt-shorts"
+                  target="_blank"
+                  >GitHub: yt-shorts</a
+                >
+              </p>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+              <p>
+                <b>Study Scheduler:</b> Developed an agentic AI system that
+                automatically planned and executed tasks by integrating large
+                language models with external tools to schedule events in Google
+                Calendar.<br /><a
+                  href="https://github.com/rohitbr234/StudyScheduler"
+                  target="_blank"
+                  >GitHub: StudyScheduler</a
+                >
+              </p>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+              <p>
+                <b>Flashcard Generator:</b> Created a program that generates
+                flashcards for Anki to support language learning, using LLM
+                prompts and automation for fast study material creation.<br /><a
+                  href="https://github.com/rohitbr234/FlashcardGenerator"
+                  target="_blank"
+                  >GitHub: FlashcardGenerator</a
+                >
+              </p>
+            </div>
+          </div>
+        </article>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+        <!-- About -->
+        <article id="about">
+          <h2 class="major">About</h2>
+          <div class="intro-container">
+            <div class="intro-image">
+              <img src="images/about.jpg" alt="RR" />
+            </div>
+            <div class="intro-text">
+              <h2>💡 About Me</h2>
+              <p>
+                I'm a rising senior passionate about
+                <strong>Computer Science</strong>,
+                <strong>Mathematics</strong>,
+                <strong>Environmental Science</strong>, and
+                <strong>Cognitive Science</strong>.
+              </p>
+              <p>
+                I enjoy projects that combine
+                <strong>analytical thinking</strong> with a curiosity for how
+                the world works — from <strong>coding AI models</strong> to
+                analyze satellite data to <strong>designing experiments</strong>
+                to study mindfulness.
+              </p>
+              <p>
+                My current focus is <strong>agentic AI systems</strong> that
+                blend computer vision, automation, and mindfulness. I see
+                technology as a bridge between understanding the world and
+                understanding ourselves.
+              </p>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+              <h2>🤝 Leadership &amp; Community</h2>
+              <ul>
+                <li>
+                  <strong>Founder and President</strong> of the Coding Club.
+                </li>
+                <li>
+                  <strong>Co-president</strong> of the Math Club and
+                  <strong>leader</strong> of the Coding Club.
+                </li>
+                <li>
+                  <strong>Tutor</strong> at Mathnasium, mentoring peers in
+                  problem-solving and logic.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+        <!-- Contact -->
+        <article id="contact">
+          <h2 class="major">Contact</h2>
+          <div class="intro-container">
+            <div class="intro-image">
+              <img src="images/contact.jpg" alt="RR" />
+            </div>
+            <div class="intro-text">
+              <p>
+                If you’d like to connect, collaborate, or learn more about my
+                research and projects, feel free to reach out through any of the
+                links below.
+              </p>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+              <ul class="contact-list">
+                <li>
+                  <strong>Email:</strong>
+                  <a href="mailto:rohit.ramesh0174@gmail.com"
+                    >rohit.ramesh0174@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <strong>LinkedIn:</strong>
+                  <a
+                    href="https://www.linkedin.com/in/rohitramesh14/"
+                    target="_blank"
+                    >linkedin.com/in/rohitramesh14</a
+                  >
+                </li>
+                <li>
+                  <strong>GitHub:</strong>
+                  <a href="https://github.com/rohitbr234" target="_blank"
+                    >github.com/rohitbr234</a
+                  >
+                </li>
+                <li>
+                  <strong>Resume:</strong>
+                  <a
+                    href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+              <ul class="icons">
+                <li>
+                  <a
+                    href="https://github.com/rohitbr234"
+                    class="icon brands fa-github"
+                    ><span class="label">GitHub</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/rohitramesh14/"
+                    class="icon brands fa-linkedin"
+                    ><span class="label">LinkedIn</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:rohit.ramesh0174@gmail.com"
+                    class="icon solid fa-envelope"
+                    ><span class="label">Email</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
 
-							</article>
+      <!-- Footer -->
+      <footer id="footer">
+        <!-- Footer credit removed -->
+      </footer>
+    </div>
 
-					</div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- Footer credit removed -->
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts: we intentionally DO NOT load Dimension overlay JS -->
+    <script>
+      // Optional: Smooth scroll with offset for header
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll('#header nav a[href^="#"]')
+          .forEach(function (link) {
+            link.addEventListener("click", function (e) {
+              var target = document.querySelector(
+                this.getAttribute("href")
+              );
+              if (target) {
+                e.preventDefault();
+                var offset =
+                  target.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  80;
+                window.scrollTo({
+                  top: offset,
+                  behavior: "smooth",
+                });
+              }
+            });
+          });
+      });
+    </script>
+  </body>
 </html>
