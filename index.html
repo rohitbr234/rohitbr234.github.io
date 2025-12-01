@@ -11,121 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="images/logo.png" type="image/png" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-    <!-- Small, surgical overrides: keep Dimension look, remove overlay -->
-    <style>
-      /* Use Inter instead of Source Sans Pro */
-      body,
-      input,
-      select,
-      textarea {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-      }
-
-      /* Let the page scroll normally, not fixed in the center */
-      #wrapper {
-        margin-top: 0;
-        padding: 3em 0 4em;
-      }
-
-      /* Header: normal centered card, not fixed overlay */
-      #header {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 40em;
-        max-width: calc(100% - 4em);
-        margin: 0 auto 3em auto;
-      }
-
-      /* Main: stacked sections instead of overlay */
-      #main {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 40em;
-        max-width: calc(100% - 4em);
-        max-height: none;
-        overflow: visible;
-        opacity: 1;
-        pointer-events: auto;
-        margin: 0 auto 4em auto;
-      }
-
-      /* Inner wrapper: let content flow */
-      #main > .inner {
-        max-height: none;
-        overflow: visible;
-        padding: 0;
-      }
-
-      /* Articles: always visible, no transitions needed */
-      #main > article {
-        position: static;
-        opacity: 1;
-        transform: none;
-        margin: 0 0 3em 0;
-      }
-
-      /* Remove the close "X" from articles if it ever appears */
-      #main > article .close {
-        display: none !important;
-      }
-
-      /* Ignore overlay-related body classes */
-      body.is-article-visible #header,
-      body.is-article-visible #main {
-        transform: none;
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      body.is-article-visible #bg {
-        transform: none;
-        filter: none;
-      }
-
-      /* Make sure nav is clickable */
-      #header nav {
-        position: relative;
-        z-index: 10;
-      }
-
-      /* Your two-column intro layout */
-      .intro-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-      }
-
-      .intro-image img {
-        display: block;
-        max-width: 100%;
-        border-radius: 0.5em;
-      }
-
-      .intro-text {
-        flex: 1 1 230px;
-      }
-
-      /* Smooth scroll behavior */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      @media screen and (max-width: 736px) {
-        .intro-container {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <!-- Custom modern CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
 
   <body>
@@ -133,30 +23,12 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-        <div class="logo">
-          <span class="icon fa-user"></span>
-        </div>
         <div class="content">
-          <div
-            class="inner"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-wrap: wrap;
-            "
-          >
+          <div class="inner">
             <div>
               <img
                 src="images/rohit.jpg"
                 alt="Rohit Ramesh"
-                style="
-                  width: 160px;
-                  height: 160px;
-                  border-radius: 50%;
-                  margin-right: 2em;
-                  object-fit: cover;
-                "
               />
             </div>
             <div>
@@ -165,72 +37,24 @@
                 High school senior passionate about computer science and applied
                 math.
               </p>
-              <div style="margin-top: 1em;">
-                <a
-                  href="https://github.com/rohitbr234"
-                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
-                >
-                  <span
-                    class="icon brands fa-github"
-                    style="
-                      font-size: 1em;
-                      vertical-align: middle;
-                      margin-right: 0.3em;
-                      position: relative;
-                      top: -1.5px;
-                    "
-                  ></span
-                  >GitHub
+              <div>
+                <a href="https://github.com/rohitbr234" target="_blank" rel="noopener">
+                  <span class="icon brands fa-github"></span>
+                  GitHub
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/rohitramesh14"
-                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
-                >
-                  <span
-                    class="icon brands fa-linkedin"
-                    style="
-                      font-size: 1em;
-                      vertical-align: middle;
-                      margin-right: 0.3em;
-                      position: relative;
-                      top: -1.5px;
-                    "
-                  ></span
-                  >LinkedIn
+                <a href="https://www.linkedin.com/in/rohitramesh14" target="_blank" rel="noopener">
+                  <span class="icon brands fa-linkedin"></span>
+                  LinkedIn
                 </a>
-                <a
-                  href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view?usp=sharing"
-                  style="margin: 0 1em; font-weight: 600; color: #0074d9;"
-                >
-                  <span
-                    class="icon fa-address-card"
-                    style="
-                      font-size: 1em;
-                      vertical-align: middle;
-                      margin-right: 0.3em;
-                      position: relative;
-                      top: -1.5px;
-                    "
-                  ></span
-                  >Resume
+                <a href="https://drive.google.com/file/d/1FWk25g3kvP95_zyIH05Q5dDAR37X-fAE/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="icon fa-address-card"></span>
+                  Resume
                 </a>
               </div>
-              <div style="margin-top: 0.5em;">
-                <a
-                  href="mailto:rohit.ramesh0174@gmail.com"
-                  style="margin: 0 1em; color: #ffffff; font-size: inherit;"
-                >
-                  <span
-                    class="icon fa-envelope"
-                    style="
-                      font-size: 1em;
-                      vertical-align: middle;
-                      margin-right: 0.3em;
-                      position: relative;
-                      top: -1.5px;
-                    "
-                  ></span
-                  >rohit.ramesh0174@gmail.com
+              <div>
+                <a href="mailto:rohit.ramesh0174@gmail.com">
+                  <span class="icon fa-envelope"></span>
+                  rohit.ramesh0174@gmail.com
                 </a>
               </div>
             </div>
@@ -783,11 +607,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <!-- BG -->
     <div id="bg"></div>
 
-    <!-- Scripts (original Dimension JS) -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Custom JavaScript for smooth scrolling and navigation -->
+    <script src="assets/js/custom.js"></script>
   </body>
 </html>
