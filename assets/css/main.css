@@ -1,54 +1,113 @@
-/* Remove modal behavior */
-#main article {
-    display: block !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
-    position: relative !important;
-    margin: 4em auto;
-    padding: 2em;
-    max-width: 900px;
-    background: rgba(0,0,0,0.65);
-    border-radius: 12px;
+/* -------------------------- */
+/* Global reset               */
+/* -------------------------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: #1f1f1f;
+    color: #fff;
 }
 
-/* Fixed navigation bar */
-#header nav {
-    position: fixed !important;
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* -------------------------- */
+/* Header / Navigation        */
+/* -------------------------- */
+
+#header {
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    background: rgba(20,20,20,0.85);
-    backdrop-filter: blur(6px);
-    padding: 1rem 0;
-    z-index: 9999 !important;
+    z-index: 9999;
+    padding: 1.4rem 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    text-align: center;
 }
 
-/* Center nav links */
 #header nav ul {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 30px !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+#header nav ul li {
+    display: inline-block;
 }
 
 #header nav ul li a {
-    color: #ffffff !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
     font-size: 1rem;
 }
 
-/* Add spacing since header is fixed */
+/* Push page content downward below fixed header */
 #wrapper {
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
-/* Article title styling */
-#main article h2.major {
-    margin-bottom: 0.8em;
+/* -------------------------- */
+/* Section / Article layout   */
+/* -------------------------- */
+
+#main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
 }
 
-/* Allow normal scrolling */
-body {
-    overflow-y: scroll !important;
+#main article {
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 14px;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* -------------------------- */
+/* Intro / About structure    */
+/* -------------------------- */
+
+.intro-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.intro-image img {
+    width: 360px;
+    border-radius: 14px;
+}
+
+/* -------------------------- */
+/* Responsive tweaks          */
+/* -------------------------- */
+
+@media (max-width: 768px) {
+
+    #wrapper {
+        padding-top: 120px;
+    }
+
+    .intro-container {
+        flex-direction: column;
+    }
+
+    .intro-image img {
+        width: 100%;
+    }
+
+    #header nav ul {
+        flex-wrap: wrap;
+        gap: 1.3rem;
+    }
 }
