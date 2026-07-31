@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohit Ramesh</title>
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --ink: #23202b;
+    --muted: #7c7688;
+    --accent: #8b6df0;
+    --accent-soft: #e9e2ff;
+    --card: #fffdf8;
+    --line: #e3ddd0;
+    --radius: 16px;
+    --maxw: 720px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg); color: var(--ink);
+    font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Segoe UI", ui-rounded, system-ui, -apple-system, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 56px 24px 80px; }
+  .header {
+    display: flex; gap: 22px; align-items: center; flex-wrap: wrap;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 24px;
+    box-shadow: 0 6px 24px rgba(80, 60, 140, 0.06);
+  }
+  .pfp {
+    width: 104px; height: 104px; border-radius: 50%;
+    object-fit: cover; border: 3px solid var(--accent-soft);
+    flex-shrink: 0; background: var(--accent-soft);
+  }
+  .id { min-width: 0; flex: 1; }
+  .id h1 { margin: 0 0 2px; font-size: 1.6rem; letter-spacing: -0.01em; }
+  .id .tagline { margin: 0 0 4px; color: var(--accent); font-weight: 600; font-size: 0.98rem; }
+  .id .bio { margin: 0 0 12px; color: var(--muted); font-size: 0.95rem; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .links a {
+    text-decoration: none; color: var(--ink); font-size: 0.85rem; font-weight: 600;
+    padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--bg);
+    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  }
+  .links a:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+  .section-label {
+    margin: 44px 0 18px; font-size: 0.8rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted); font-weight: 700;
+  }
+  .timeline { position: relative; margin-left: 8px; padding-left: 28px; border-left: 2px solid var(--line); }
+  .entry { position: relative; padding: 0 0 30px 0; }
+  .entry:last-child { padding-bottom: 4px; }
+  .entry::before {
+    content: ""; position: absolute; left: -37px; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .entry .date { font-size: 0.78rem; color: var(--accent); font-weight: 700; letter-spacing: 0.02em; margin-bottom: 2px; }
+  .entry h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .entry p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+  .entry a { color: var(--accent); }
+  .tags { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tags span {
+    font-size: 0.72rem; font-weight: 600; color: var(--muted);
+    background: var(--bg); border: 1px solid var(--line);
+    padding: 2px 9px; border-radius: 999px;
+  }
+  footer { margin-top: 60px; text-align: center; color: var(--muted); font-size: 0.8rem; }
+  @media (max-width: 480px) { .header { flex-direction: column; text-align: center; } .links { justify-content: center; } }
+  @media print { body { background: none; } .links a { border-color: var(--line); } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+      <!-- EDIT ME: put your photo at images/pfp.jpg, or swap the src below -->
+      <img class="pfp" src="images/pfp.jpg" alt="Rohit Ramesh" onerror="this.style.visibility='hidden'">
+      <div class="id">
+        <h1>Rohit Ramesh</h1>
+        <p class="tagline">what i'm building lately</p>
+        <p class="bio">
+          <!-- EDIT ME: one or two lines about you -->
+          Engineer / student / perpetual tinkerer. I like small tools, weird side projects, and shipping things.
+        </p>
+        <nav class="links">
+          <!-- EDIT ME: fill in your real URLs -->
+          <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://twitter.com/YOUR_HANDLE" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://linkedin.com/in/YOUR_HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ TIMELINE (newest at top) ============ -->
+    <div class="section-label">Recently</div>
+    <div class="timeline">
+
+      <!-- EDIT ME: copy an .entry block to add more. Keep newest on top. -->
+      <div class="entry">
+        <div class="date">Jul 2026</div>
+        <h3>Started this site</h3>
+        <p>Set up a little personal page to track what I'm working on. Hello, internet.</p>
+        <div class="tags"><span>web</span><span>personal</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="date">Jun 2026</div>
+        <h3>Some project name</h3>
+        <p>A sentence about what it is and why you did it. Link it: <a href="#">repo &rarr;</a></p>
+        <div class="tags"><span>side project</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="date">May 2026</div>
+        <h3>Something you learned or shipped</h3>
+        <p>Short note. Keep it casual, one or two lines is plenty.</p>
+      </div>
+
+      <div class="entry">
+        <div class="date">2025</div>
+        <h3>An older milestone</h3>
+        <p>Older stuff can just get a year instead of a month.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      Made by Rohit &middot; last updated Jul 2026
+    </footer>
+
+  </div>
+</body>
+</html>
+
+
